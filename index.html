@@ -561,6 +561,18 @@ document.addEventListener('DOMContentLoaded', function(e) {
   .response-stats .compact-table { width:82% !important; }
   .response-figure img.fit-slide-image { max-height:42vh !important; }
 }
+</style><style type="text/css">
+.reveal .slides section.appendix-divider {
+  text-align: center;
+}
+.reveal .slides section.appendix-divider h2 {
+  font-size: 2.2em;
+  margin-bottom: 0.35em;
+}
+.reveal .slides section.appendix-divider p {
+  font-size: 1.05em;
+  opacity: 0.75;
+}
 </style></head>
 <body>
 <div class="reveal">
@@ -573,7 +585,7 @@ Chile</h1>
 Ridge, LASSO, Elastic Net e Interpretación Bayesiana</h1>
 <h2 class="author">Dr. Carlos Montenegro Silva &amp; Maximiliano
 Zilleruelo León</h2>
-<p class="institute" style="color:#e6f4f7; font-size:0.62em; line-height:1.25; margin:0.35em 0 0.65em 0;">División Investigación Pesquera<br>Instituto de Fomento Pesquero, IFOP - Chile</p>
+<p class="institute" style="color:#e6f4f7; font-size:0.62em; line-height:1.25; margin:0.35em 0 0.65em 0;">División Investigación Pesquera<br/>Instituto de Fomento Pesquero, IFOP - Chile</p>
 <h3 class="date">2026-08-03</h3>
 </section>
 <section class="slide level2" id="propósito-de-la-presentación">
@@ -1391,7 +1403,7 @@ mismo tiempo, eliminar predictores irrelevantes.</p>
 <th style="text-align: right;">RMSE</th>
 <th style="text-align: right;">MAE</th>
 <th style="text-align: right;">MAPE (%)</th>
-<th style="text-align: right;"><span class="math inline">\(R^2\)</span></th>
+<th style="text-align: right;">R²</th>
 </tr>
 </thead>
 <tbody>
@@ -1540,7 +1552,7 @@ interpretabilidad del modelo lineal, pero mejora su comportamiento en
 escenarios de alta dimensionalidad, multicolinealidad y riesgo de
 sobreajuste.</p>
 <div class="key-message center-web"><strong>Regularizar es aceptar un poco de sesgo para ganar estabilidad y capacidad predictiva.</strong></div>
-</section><section class="slide level2" id="normas-de-vectores">
+</section><section class="slide level2 appendix-divider" id="apéndice"><h2>Apéndice</h2><p>Material complementario</p></section><section class="slide level2" id="normas-de-vectores">
 <h2>Normas de vectores</h2>
 <p>Una norma es una forma de medir el tamaño o longitud de un
 vector.</p>
