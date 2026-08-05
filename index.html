@@ -602,7 +602,7 @@ insesgado;</li>
 <li>formular Ridge, LASSO y Elastic Net;</li>
 <li>elegir el parámetro de penalización mediante validación
 cruzada;</li>
-<li>interpretar Ridge y LASSO desde una perspectiva bayesiana;</li>
+<li>interpretar Ridge, LASSO y Elastic Net desde una perspectiva bayesiana;</li>
 <li>implementar estos métodos en R.</li>
 </ul>
 <!-- Agenda -->
@@ -1403,7 +1403,7 @@ mismo tiempo, eliminar predictores irrelevantes.</p>
 <th style="text-align: right;">RMSE</th>
 <th style="text-align: right;">MAE</th>
 <th style="text-align: right;">MAPE (%)</th>
-<th style="text-align: right;">R²</th>
+<th style="text-align: right;"><span class="math inline">\(R^2\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1951,6 +1951,20 @@ y tiene colas más pesadas.</p>
 como cero, mientras permite que otros permanezcan relativamente
 grandes.</p>
 <div class="key-message center-web"><strong>LASSO: muchos coeficientes pequeños o nulos, pocos coeficientes relevantes.</strong></div>
+</section><section class="slide level2" id="interpretacion-bayesiana-elastic-net">
+<h2>Interpretación bayesiana de Elastic Net</h2>
+<p>Elastic Net también admite una interpretación como estimación <strong>MAP</strong>.</p>
+<p>Manteniendo la verosimilitud normal, se puede definir para cada coeficiente un prior:</p>
+<p><span class="math display">\[
+p(\beta_j)\propto \exp\left\{-\lambda\left[\alpha|\beta_j|+\frac{1-\alpha}{2}\beta_j^2\right]\right\}.
+\]</span></p>
+<p>Este prior puede entenderse como el <strong>producto</strong> de un componente Laplace y uno Gaussiano, no como una distribución mezcla.</p>
+<ul>
+<li>si <span class="math inline">\(\alpha=1\)</span>, se recupera LASSO (prior Laplace);</li>
+<li>si <span class="math inline">\(\alpha=0\)</span>, se recupera Ridge (prior Gaussiano);</li>
+<li>si <span class="math inline">\(0&lt;\alpha&lt;1\)</span>, se combinan selección y estabilidad.</li>
+</ul>
+<div class="key-message center-web"><strong>Elastic Net: interpretación MAP con un prior que combina los efectos L1 y L2.</strong></div>
 </section><section class="slide level2" id="comparación-bayesiana">
 <h2>Comparación bayesiana</h2>
 <table>
